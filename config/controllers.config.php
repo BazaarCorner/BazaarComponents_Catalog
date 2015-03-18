@@ -3,7 +3,7 @@
 return [
     'invokables' => [
         'BazaarCatalog\Controller\Index' => 'BazaarCatalog\Controller\IndexController',
-        'BazaarCatalog\Controller\Page' => 'BazaarCatalog\Controller\PageController',
-        'BazaarCatalog\Controller\BazaarCatalogMap' => 'BazaarCatalog\Controller\BazaarCatalogMapController',
+        'BazaarCatalog\Controller\Product' => 'BazaarCatalog\Controller\ProductController',
+        'BazaarCatalog\Controller\Brand' => 'BazaarCatalog\Controller\BrandController',
     ]
 ];

@@ -24,56 +24,21 @@
  * THE SOFTWARE.
  */
 
-namespace BazaarCatalog;
+namespace BazaarCatalog\Controller;
+
+use Zend\Mvc\Controller\AbstractActionController;
+use Zend\View\Model\ViewModel;
 
 /**
- * BazaarCatalog\Module
+ * BazaarCatalog\Controller\IndexController
  *
- * @package BazaarCatalog
+ * @package BazaarCatalog\Controller
  * @author Gab Amba <gamba@gabbydgab.com>
  */
-class Module
+class IndexController extends AbstractActionController
 {
-    public function getConfig()
+    public function indexAction()
     {
-        $config      = [];
-        $configFiles = [
-            'module.config.php',
-            'routes.config.php',
-        ];
-        
-        foreach ($configFiles as $configFile) {
-            $config = \Zend\Stdlib\ArrayUtils::merge(
-                $config, include  __DIR__ .'/config/'. $configFile
-            );
-        }
-
-        return $config;
-    }
-
-    public function getAutoloaderConfig()
-    {
-        return [
-            'Zend\Loader\StandardAutoloader' => [
-                'namespaces' => [
-                    __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
-                ]
-            ]
-        ];
-    }
-    
-    public function getControllerConfig()
-    {
-        return include __DIR__ . '/config/controllers.config.php';
-    }
-    
-    public function getControllerPluginConfig()
-    {
-        return include __DIR__ . '/config/controller.plugins.config.php';;
-    }
-    
-    public function getServiceConfig()
-    {
-        return include __DIR__ . '/config/services.config.php';
+        return new ViewModel();
     }
 }

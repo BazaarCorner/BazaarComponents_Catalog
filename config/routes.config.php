@@ -4,72 +4,38 @@ return [
     'console'   => [], //routing configuration for CLI modules
     'router'    => [
         'routes' => [
-            'home' => [
+            'catalog'    => [
                 'type'      => 'Literal',
                 'options'   => [
-                    'route'     => '/',
+                    'route'     => '/catalog',
                     'defaults'  => [
-                        'controller'    => 'Site\Controller\Index',
+                        'controller'    => 'BazaarCatalog\Controller\Index',
                         'action'        => 'index'
                     ]
                 ],
                 'may_terminate' => true,
-                'child_routes' => [                    
+                'child_routes'  => [      
                     // IndexController
-                    'about' => [
-                        'type'  => "Literal",
-                        'options' => [
-                            'route' => 'about',
-                            'defaults' => [
-                                'action'  => 'about',
+                    'product'   => [
+                        'type'      => "Literal",
+                        'options'   => [
+                            'route'     => '/product',
+                            'defaults'  => [
+                                'controller'=> 'BazaarCatalog\Controller\Product',
+                                'action'    => 'index'
                             ]
                         ]
                     ],
-                    'help' => [
-                        'type'  => "Literal",
-                        'options' => [
-                            'route' => 'help',
-                            'defaults' => [
-                                'action'  => 'help',
+                    'brand'     => [
+                        'type'      => "Literal",
+                        'options'   => [
+                            'route'     => '/brand',
+                            'defaults'  => [
+                                'controller'=> 'BazaarCatalog\Controller\Brand',
+                                'action'  => 'index'
                             ]
                         ]
-                    ],
-                    'terms' => [
-                        'type'  => "Literal",
-                        'options' => [
-                            'route' => 'terms_-and-_condition',
-                            'defaults' => [
-                                'action'  => 'terms-and-condition',
-                            ]
-                        ]
-                    ],
-                    'policy' => [
-                        'type'  => "Literal",
-                        'options' => [
-                            'route' => 'privacy_policy',
-                            'defaults' => [
-                                'action'  => 'privacy-policy',
-                            ]
-                        ]
-                    ],
-                    'shipping' => [
-                        'type'  => "Literal",
-                        'options' => [
-                            'route' => 'shipping_-and-_returns',
-                            'defaults' => [
-                                'action'  => 'shipping-and-return',
-                            ]
-                        ]
-                    ],
-//                    'contact' => [
-//                        'type'  => "Literal",
-//                        'options' => [
-//                            'route' => 'contact',
-//                            'defaults' => [
-//                                'action'  => 'contact',
-//                            ]
-//                        ]
-//                    ],
+                    ]
                 ]
             ]
         ]
