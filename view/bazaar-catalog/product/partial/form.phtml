@@ -1,0 +1,45 @@
+<!-- TODO: use form helper -->
+<div class="form-holder">
+    <form method="POST" 
+          class="form form-group-sm"
+          role="form"
+          action="<?=$this->url('catalog/product/create')?>">
+        <fieldset>
+            <legend style="font-size:12px; font-weight: bold;">General Information:</legend>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <input class="form-control" 
+                            type="text"
+                            placeholder="Stock Keeping Unit (SKU)" 
+                            name="sku">         
+                    </div>
+                    <div class="col-md-5">
+                        <input class="form-control" 
+                            type="text" 
+                            placeholder="Product name"
+                            name="name">                        
+                    </div>
+                    <div class="col-md-4">
+                        <input class="form-control" 
+                            type="text" 
+                            placeholder="Brand name"
+                            name="brand_id">
+                    </div>
+                </div>
+        </fieldset>
+        <div class="divider"><br></div>
+        <fieldset>
+            <legend style="font-size:12px; font-weight: bold;">Product Category:</legend>
+        </fieldset>
+        <div class="row-fluid pull-right">
+            <div class="form-group">
+                <input class="btn btn-primary"
+                    type="submit"
+                    value="Create">
+            </div>            
+        </div>
+        <div class="clearfix"></div>
+    </form>
+</div>
+
+<br> <!-- <br> required to add separation-->
