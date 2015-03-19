@@ -9,6 +9,7 @@ return [
         'exception_template'        => 'error/index',
         'template_map'              => [
             'template/partial/product/create'   => __DIR__ . '/../view/bazaar-catalog/product/partial/form.phtml',
+            'template/partial/brand/create'   => __DIR__ . '/../view/bazaar-catalog/brand/partial/form.phtml',
         ],
         'template_path_stack'       => [
             'bazaar-catalog'   => __DIR__ . '/../view'

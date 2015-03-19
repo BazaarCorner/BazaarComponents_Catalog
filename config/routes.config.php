@@ -46,6 +46,18 @@ return [
                                 'controller'=> 'BazaarCatalog\Controller\Brand',
                                 'action'  => 'index'
                             ]
+                        ],
+                        'may_terminate' => true,
+                        'child_routes'  => [
+                            'create'    => [
+                                'type'      => "Literal",
+                                'options'   => [
+                                    'route'     => '/create',
+                                    'defaults'  => [
+                                        'action'    => 'create'
+                                    ]
+                                ]
+                            ]
                         ]
                     ]
                 ]

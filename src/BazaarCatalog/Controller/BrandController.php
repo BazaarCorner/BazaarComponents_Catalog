@@ -41,4 +41,14 @@ class BrandController extends AbstractActionController
     {
         return new ViewModel();
     }
+    
+    public function createAction()
+    {
+        return new ViewModel();
+    }
+    
+    public function deleteAction()
+    {
+        return new ViewModel();
+    }
 }

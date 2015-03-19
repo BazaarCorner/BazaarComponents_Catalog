@@ -39,11 +39,11 @@ return [
                 'route' =>  "#",
                 'icon'  => "fa fa-book",
                 'pages' => [
-                    'dashboard' => [
-                        'label' => "Dashboard",
-                        'route' => "catalog",
-                        'icon'  => "fa fa-dashboard",
-                    ],
+//                    'dashboard' => [
+//                        'label' => "Dashboard",
+//                        'route' => "catalog",
+//                        'icon'  => "fa fa-dashboard",
+//                    ],
                     'products'  => [
                         'label' => "Manage Products",
                         'route' => "catalog/product",

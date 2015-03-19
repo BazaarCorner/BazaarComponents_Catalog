@@ -49,6 +49,6 @@ class ProductController extends AbstractActionController
     
     public function deleteAction()
     {
-        
+        return new ViewModel();
     }
 }
