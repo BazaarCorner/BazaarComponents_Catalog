@@ -40,6 +40,7 @@ class Module
         $configFiles = [
             'module.config.php',
             'routes.config.php',
+            'navigation.config.php',
         ];
         
         foreach ($configFiles as $configFile) {
